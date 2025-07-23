@@ -128,7 +128,7 @@ const Home = () => {
         <div className="flex justify-center space-x-4 mt-8">
           <button
             onClick={() => setActiveTab("current")}
-            className={`px-4 py-2 rounded-md ${
+            className={`px-3 py-2 rounded-md text-[14px] ${
               activeTab === "current"
                 ? "bg-blue-500 text-white"
                 : "bg-gray-200 text-gray-700"
@@ -138,7 +138,7 @@ const Home = () => {
           </button>
           <button
             onClick={() => setActiveTab("interprete me")}
-            className={`px-4 py-2 rounded-md ${
+            className={`px-3 py-2 rounded-md ${
               activeTab === "interprete me"
                 ? "bg-blue-500 text-white"
                 : "bg-gray-200 text-gray-700"
@@ -152,10 +152,10 @@ const Home = () => {
       <div className="pt-5 grid grid-cols-1 auto-rows-[100px]  gap-5 md:grid-cols-3">
         {/* Current/Interprete */}
         <div
-          className={`box1 p-[20px] rounded-2xl bg-[#fdfdfd] shadow-md row-span-4 ${
+          className={`box1 px-[20px] rounded-2xl bg-[#fdfdfd] shadow-md ${
             activeTab === "interprete me"
               ? "row-span-5 lg:row-span-3 justify-start"
-              : "row-span-4"
+              : "row-span-3"
           } md:col-span-2  lg:row-span-2 flex justify-center flex-col md:flex-row`}
         >
           {activeTab === "current" && weatherData ? (
@@ -171,9 +171,9 @@ const Home = () => {
         </div>
 
         {/* Other Cities */}
-        <div className="box2 p-[20px] bg-[#fdfdfd] shadow-md rounded-2xl md:block row-span-4 md:row-span-8 lg:row-span-5 ">
-          <div>
-            <h1 className="text-xl font-bold">Other Cities</h1>
+        <div className="box2 p-[20px] bg-[#fdfdfd] shadow-md rounded-2xl md:block row-span-5 md:row-span-8 lg:row-span-5 ">
+          <div className="">
+            <h1 className="text-xl font-bold pt-5 mb-5 md:pt-0 md:mb-0">Other Cities</h1>
             <OtherCities />
           </div>
         </div>
@@ -183,7 +183,7 @@ const Home = () => {
             activeTab === "current"
               ? "lg:row-span-4"
               : ""
-          } md:col-span-2 row-span-6 lg:row-span-2 xl:row-span-3 xl:pt-10`}>
+          } md:col-span-2 row-span-7 lg:row-span-2 xl:row-span-3 xl:pt-10`}>
             <CurrWeatherHighlight weatherData={weatherData}/>
         </div>
 

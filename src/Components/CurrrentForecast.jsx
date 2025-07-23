@@ -10,7 +10,7 @@ const CurrrentForecast = ({weatherData}) => {
           <img className="w-[100px]" src={weatherData.icon} alt="" />
           <div className='flex w-full bg-white shadow-md items-center gap-10 text-[18px] px-5 mt-5 lg:gap-2'>
             <div className="flex flex-col " >
-              <span className="text-[20px] font-bold">
+              <span className="text-[18px] font-bold">
                 {weatherData.city} {weatherData.country}
               </span>
               <span className="text-[16px] text-gray-500 capitalize">
@@ -18,7 +18,7 @@ const CurrrentForecast = ({weatherData}) => {
               </span>
             </div>
             <div className="">
-              <span className="text-[32px] flex font-bold lg:text-[28px]">
+              <span className="text-[24px] flex font-bold lg:text-[28px]">
                 {weatherData.temp}<span className='lg:text-[20px]'>°C</span>
               </span>
             </div>
@@ -32,13 +32,13 @@ const CurrrentForecast = ({weatherData}) => {
             <div className="flex items-center gap-3 gap-">
               <img className="w-[30px]" src={humidity_icon} alt="" />
               <div className="flex flex-col ">
-                <span className="text-[2rem] font-bold">
+                <span className="text-[24px] font-bold">
                   {weatherData.humidity}
                 </span>
-                <span className="text-[1rem]font-bold">%</span>
+                <span className="text-[1rem] font-bold">%</span>
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col text-[14px]">
               <h1>Humidity</h1>
               <span>{weatherData.date}</span>
             </div>
@@ -49,13 +49,13 @@ const CurrrentForecast = ({weatherData}) => {
             <div className="flex  items-center gap-3 gap-">
               <img className="w-[30px]" src={wind} alt="" />
               <div className="flex flex-col">
-                <span className="text-[2rem] font-bold">
+                <span className="text-[24px] font-bold">
                   {weatherData.wind}
                 </span>
-                <span className="text-[1rem]font-bold">Km/h</span>
+                <span className="text-[1rem] font-bold">Km/h</span>
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col text-[14px]">
               <h1>Wind Speed</h1>
               <span>{weatherData.date}</span>
             </div>

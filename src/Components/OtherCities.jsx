@@ -80,7 +80,7 @@ const fetchRandomCities = async () => {
       {loading && <div className="text-center">Loading...</div>}
       <div className="flex flex-col gap-4">
         {otherCityWeather.map((city, idx) => (
-          <div key={idx} className="flex items-center justify-center gap-4 bg-[#fdfdfd] shadow-md rounded-2xl p-4 md:flex-col md:py-1 lg:flex-row lg:px-4 lg:py-2">
+          <div key={idx} className="flex items-center justify-center gap-4 bg-[#fdfdfd] shadow-md rounded-2xl px-4 md:flex-col md:py-1 lg:flex-row lg:px-4 lg:py-2">
             <img src={city.icon}  alt={city.city} className="w-20 h-20" />
             <div className='flex flex-col justify-center items-center' >
               <div className="font-bold">{city.city}</div>

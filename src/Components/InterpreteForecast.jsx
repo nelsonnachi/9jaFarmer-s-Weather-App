@@ -29,7 +29,7 @@ const InterpreteForecast = ({weatherData}) => {
             <img className="w-[100px]" src={weatherData.icon} alt="" />
             <div className="w-full bg-white shadow-md flex items-center gap-5 text-[18px] px-10 mt-5">
               <div className="flex flex-col">
-                <span className="text-[1.3rem] font-bold">
+                <span className="text-[18px] font-bold">
                   {weatherData.city} {weatherData.country}
                 </span>
                 <span className="text-[16px] text-gray-500 capitalize">
@@ -37,7 +37,7 @@ const InterpreteForecast = ({weatherData}) => {
                 </span>
               </div>
               <div className="">
-                <span className="text-[2rem] flex font-bold">
+                <span className="text-[24px] font-bold">
                   {weatherData.temp} °C
                 </span>
               </div>

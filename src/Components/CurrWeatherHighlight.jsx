@@ -45,21 +45,21 @@ const CurrWeatherHighlight = ({ weatherData }) => {
         </h1>
         <div className="flex flex-col gap-3 lg:flex-row lg:justify-around  lg:items-center">
           {/* two stack 1*/}
-          <div className="flex flex-col mt-5 xl:flex-row xl:flex-1 xl:gap-3">
+          <div className="flex flex-col gap-3 mt-5 xl:flex-row xl:flex-1">
             <div
-              className="bg-[#fdfdfd] flex items-center justify-between gap-3 mt-5 lg:mt-3 lg:flex-col shadow-md py-3 px-5 rounded-2xl xl:w-[100px] xl:h-[180px]"
+              className="bg-[#fdfdfd] flex items-center justify-between gap-5 mt-5 lg:mt-3 lg:flex-col shadow-md py-3 px-5 rounded-2xl xl:w-[100px] xl:h-[180px]"
             >
               <div>
                 <img className="h-[5 0px] w-[50px]" src={compass} alt="" />
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h2 className="font-bold">Weather</h2>
-                <h2 className="text-gray-500">{tempMsg}</h2>
+                <h2 className="text-gray-500 text-sm">{tempMsg}</h2>
               </div>
               <div className="lg:flex">
-                <span className="text-[24px] font-bold">
+                <span className="text-[20px] font-bold">
                   {weatherData.temp}
-                  <span className="text-[24px]">°C</span>
+                  <span className="">°C</span>
                 </span>
               </div>
             </div>
@@ -72,30 +72,30 @@ const CurrWeatherHighlight = ({ weatherData }) => {
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h2 className="font-bold">Cloud</h2>
-                <h2 className="text-gray-500">{cloudMsg}</h2>
+                <h2 className="text-gray-500 text-sm">{cloudMsg}</h2>
               </div>
               <div className="lg:flex">
-                <span className="text-[24px] font-bold">
+                <span className="text-[20px] font-bold">
                   {weatherData.clouds}
-                  <span className="text-[24px]">%</span>
+                  <span className="">%</span>
                 </span>
               </div>
             </div>
           </div>
           {/* two stack 2*/}
-          <div className="flex flex-col lg:pt-5 xl:flex-row xl:gap-3">
+          <div className="flex flex-col lg:pt-5 xl:flex-row gap-3">
             <div
-              className="bg-[#fdfdfd] flex items-center justify-between gap-3 mt-5 lg:mt-3 lg:flex-col shadow-md py-3 px-5 rounded-2xl xl:w-[100px] xl:h-[180px]"
+              className="bg-[#fdfdfd] flex items-center justify-between gap-5 mt-5 lg:mt-3 lg:flex-col shadow-md py-3 px-5 rounded-2xl xl:w-[100px] xl:h-[180px]"
             >
               <div>
                 <img className="h-[5 0px] w-[50px]" src={ultraviolet} alt="" />
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h2 className="font-bold">Sunrise</h2>
-                <h2 className="text-gray-500">{weatherData.sunrise}</h2>
+                <h2 className="text-gray-500 text-sm">{weatherData.sunrise}</h2>
               </div>
               <div>                
-                  <span className="text-[20px] font-bold xl:text-[16px]">WAT</span>
+                  <span className="text-[16px] font-bold">WAT</span>
               </div>
             </div>
 
@@ -107,27 +107,27 @@ const CurrWeatherHighlight = ({ weatherData }) => {
               </div>
               <div className="flex flex-col items-center justify-center ">
                 <h2 className="font-bold">Sunset</h2>
-                <h2 className="text-gray-500">{weatherData.sunset}</h2>
+                <h2 className="text-gray-500 ">{weatherData.sunset}</h2>
               </div>
               <div>
-                <span className="text-[20px] font-bold xl:text-[16px]">WAT</span>
+                <span className="text-[16px] font-bold">WAT</span>
               </div>
             </div>
           </div>
           {/* two stack 3*/}
-          <div className="flex flex-col mt-0 xl:flex-row xl:flex-1 xl:gap-3">
+          <div className="flex flex-col mt-0 xl:flex-row xl:flex-1 gap-3">
             <div
-              className="bg-[#fdfdfd] flex items-center justify-between gap-3 mt-5 lg:mt-3 lg:flex-col shadow-md py-3 px-5 rounded-2xl xl:w-[100px] xl:h-[180px]"
+              className="bg-[#fdfdfd] flex items-center justify-between gap-5 mt-5 lg:mt-3 lg:flex-col shadow-md py-3 px-5 rounded-2xl xl:w-[100px] xl:h-[180px]"
             >
               <div>
                 <img className="h-[50px] w-[50px]" src={drops} alt="" />
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h2 className="font-bold">Humidity</h2>
-                <h2 className="text-gray-500">{humidityMsg}</h2>
+                <h2 className="text-gray-500 text-sm">{humidityMsg}</h2>
               </div>
               <div className="lg:flex">
-                <span className="text-[24px] font-bold">
+                <span className="text-[20px] font-bold">
                   {weatherData.humidity}
                 </span>
                 <span className="text-[24px] font-bold">%</span>
@@ -142,10 +142,10 @@ const CurrWeatherHighlight = ({ weatherData }) => {
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h2 className="font-bold">Wind</h2>
-                <h2 className="text-gray-500">{windMsg}</h2>
+                <h2 className="text-gray-500 text-sm">{windMsg}</h2>
               </div>
               <div className="lg:flex">
-                <span className="text-[24px] font-bold">
+                <span className="text-[20px] font-bold">
                   {weatherData.wind}
                 </span>
                 <span className="text-[20px]">mph</span>
