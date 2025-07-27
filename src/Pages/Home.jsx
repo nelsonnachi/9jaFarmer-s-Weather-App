@@ -11,6 +11,7 @@ import clear from "../assets/clear.png";
 import FarmTips from "../Components/FarmTips";
 import InterWeatherHighlight from "../Components/InterWeatherHighlight";
 import CurrWeatherHighlight from "../Components/CurrWeatherHighlight";
+import FullScreenModal from "../Components/FullScreenModal";
 
 const Home = () => {
   const inputRef = useRef();
@@ -48,7 +49,7 @@ const Home = () => {
     }
 
     try {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},ng&units=metric&appid=${
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)},ng&units=metric&appid=${
         import.meta.env.VITE_APP_ID
       }`;
 
@@ -116,12 +117,16 @@ const Home = () => {
               <Search className="w-5 h-5" />
             </button>
           </form>
-
+          
+          {/* modal for error on search */}
           <div className="p-4">
             {showModal && (
               <Modal message={modalMessage} onClose={handleCloseModal} />
             )}
           </div>
+
+          {/* modal for fullscreen motificication */}
+          <FullScreenModal />
         </div>
 
         {/* Toggling Component to display either the current weather forcast or to interprete the current weather forecast on a new component */}
